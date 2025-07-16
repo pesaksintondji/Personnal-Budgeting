@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div style="display:flex;justify-content:center;align-items:center;gap:1rem;">
+        <label for="currencySelector">Currency:</label>
+        <select id="currencySelector">
+          <option value="$">$ (USD)</option>
+          <option value="€">€ (EUR)</option>
+          <option value="£">£ (GBP)</option>
+          <option value="¥">¥ (JPY)</option>
+          <option value="₹">₹ (INR)</option>
+          <option value="₦">₦ (NGN)</option>
+          <option value="custom">Custom</option>
+        </select>
+        <input type="text" id="customCurrencyInput" placeholder="Symbol" style="width:3em;display:none;" maxlength="3" />
+        <h1>Budget App</h1>
+      </div>
+    </header>
+    <section id="dashboard"></section>
+    <section id="transaction-form"></section>
+    <section id="transaction-list"></section>
+    <section id="charts">
+      <canvas id="categoryChart"></canvas>
+      <canvas id="monthlyChart"></canvas>
+    </section>
+    <section id="data-tools">
+      <button id="exportBtn">Export Data</button>
+      <input type="file" id="importInput" style="display:none;" />
+      <button id="importBtn">Import Data</button>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html> 
